@@ -86,6 +86,15 @@ public class PollManager {
 
         poll.getVotes().add(vote);
     }
+    public void deletePoll(String pollId) {
+        polls.remove(pollId);
+        if (pollId == null) {
+            throw new IllegalArgumentException("Poll is not found");
+        }
+
+    }
+
+
 
 
 }

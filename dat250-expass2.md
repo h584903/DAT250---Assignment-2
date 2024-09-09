@@ -32,7 +32,7 @@ http POST localhost:8080/{pollId}/vote?username=tester&voteOptionId=1
 ```
 
 At the time of writing I'm still missing deleting and changing votes, but it should be easy to fix
-when I get time.
+when I get time. // This is now fixed, and even added to automated testing
 
 ## Step 4
 After testing with HTTPie, and setting it up I started with setting up the controllers.

@@ -35,7 +35,14 @@ public class PollsController {
         return ResponseEntity.ok("Vote added to the poll");
 
     }
-
-
+    @DeleteMapping("deletePoll/{pollId}")
+    public ResponseEntity<String> deletePoll(@PathVariable String pollId) {
+        try {
+            pollManager.deletePoll(pollId);
+        } catch(IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+        return ResponseEntity.ok("Poll was deleted");
+    }
 
 }

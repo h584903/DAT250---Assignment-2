@@ -15,6 +15,7 @@ import org.springframework.test.web.servlet.MvcResult;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
@@ -64,10 +65,10 @@ public class  PollManagerTest {
 
         PollApp.Poll poll = pollManager.getAllPolls().getFirst();
         assertThat(poll).isNotNull();
-        assertThat(poll.getQuestion()).isEqualTo("What's your favorite programming test framework?");
+        assertThat(poll.getQuestion()).isEqualTo("What's your favorite programming language?");
         assertThat(poll.getVoteOptions().size()).isEqualTo(2);
-        assertThat(poll.getVoteOptions().get(0).getCaption()).isEqualTo("JUnit");
-        assertThat(poll.getVoteOptions().get(1).getCaption()).isEqualTo("TestNG");
+        assertThat(poll.getVoteOptions().get(0).getCaption()).isEqualTo("Rust");
+        assertThat(poll.getVoteOptions().get(1).getCaption()).isEqualTo("Python");
     }
 
     @Test
@@ -86,6 +87,20 @@ public class  PollManagerTest {
 
         assertThat(vote.getVoter()).isEqualTo(user);
         assertThat(vote.getOptionId()).isEqualTo("1");
+    }
+    @Test
+    public void testDeletePoll() throws Exception {
+        testCreateNewPoll();
+
+        PollApp.Poll poll = pollManager.getAllPolls().getFirst();
+
+        assertThat(pollManager.getAllPolls().size()).isEqualTo(2);
+
+        mockMvc.perform(delete("/deletePoll/{pollId}", poll.getId()))
+                .andExpect(status().isOk())
+                .andReturn();
+
+        assertThat(pollManager.getAllPolls().size()).isEqualTo(1);
     }
 
 

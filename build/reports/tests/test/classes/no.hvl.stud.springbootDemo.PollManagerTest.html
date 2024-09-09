@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">3</div>
+<div class="counter">4</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.613s</div>
+<div class="counter">0.617s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,12 +82,12 @@
 </thead>
 <tr>
 <td class="success">testAddVoteToPoll()</td>
-<td class="success">0.604s</td>
+<td class="success">0.603s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testCreateNewPoll()</td>
-<td class="success">0.006s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -95,13 +95,18 @@
 <td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
+<tr>
+<td class="success">testDeletePoll()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
 </table>
 </div>
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>08:19:37.263 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [no.hvl.stud.springbootDemo.PollManagerTest]: PollManagerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-08:19:37.321 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration no.hvl.stud.springbootDemo.SpringbootDemoApplication for test class no.hvl.stud.springbootDemo.PollManagerTest
+<pre>09:18:41.275 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [no.hvl.stud.springbootDemo.PollManagerTest]: PollManagerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:18:41.335 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration no.hvl.stud.springbootDemo.SpringbootDemoApplication for test class no.hvl.stud.springbootDemo.PollManagerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -112,23 +117,26 @@
 
  :: Spring Boot ::                (v3.3.3)
 
-2024-09-09T08:19:37.547+02:00  INFO 45007 --- [springbootDemo] [    Test worker] n.h.stud.springbootDemo.PollManagerTest  : Starting PollManagerTest using Java 22.0.1-ga with PID 45007 (started by tesdap in /home/tesdap/projects/uni/DAT250/oblig/assignment2/DAT250---Assignment-2)
-2024-09-09T08:19:37.548+02:00  INFO 45007 --- [springbootDemo] [    Test worker] n.h.stud.springbootDemo.PollManagerTest  : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2024-09-09T08:19:38.197+02:00  INFO 45007 --- [springbootDemo] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-09-09T08:19:38.197+02:00  INFO 45007 --- [springbootDemo] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-09-09T08:19:38.199+02:00  INFO 45007 --- [springbootDemo] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2024-09-09T08:19:38.216+02:00  INFO 45007 --- [springbootDemo] [    Test worker] n.h.stud.springbootDemo.PollManagerTest  : Started PollManagerTest in 0.828 seconds (process running for 1.36)
+2024-09-09T09:18:41.577+02:00  INFO 65907 --- [springbootDemo] [    Test worker] n.h.stud.springbootDemo.PollManagerTest  : Starting PollManagerTest using Java 22.0.1-ga with PID 65907 (started by tesdap in /home/tesdap/projects/uni/DAT250/oblig/assignment2/DAT250---Assignment-2)
+2024-09-09T09:18:41.578+02:00  INFO 65907 --- [springbootDemo] [    Test worker] n.h.stud.springbootDemo.PollManagerTest  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-09-09T09:18:42.382+02:00  INFO 65907 --- [springbootDemo] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-09-09T09:18:42.383+02:00  INFO 65907 --- [springbootDemo] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-09-09T09:18:42.385+02:00  INFO 65907 --- [springbootDemo] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-09-09T09:18:42.416+02:00  INFO 65907 --- [springbootDemo] [    Test worker] n.h.stud.springbootDemo.PollManagerTest  : Started PollManagerTest in 1.013 seconds (process running for 1.602)
 Add user: tester,tester@example.com
 Get user testerusers {tester=User{username='tester', email='tester@example.com'}}
 Get user testerusers {tester=User{username='tester', email='tester@example.com'}}
-Poll created: no.hvl.stud.springbootDemo.domains.PollApp$Poll@4fa0ee7e by user: tester
-6cbc5efd-75e8-4108-a67d-6840d9490ccd
+Poll created: no.hvl.stud.springbootDemo.domains.PollApp$Poll@5aa6da2 by user: tester
 Get user testerusers {tester=User{username='tester', email='tester@example.com'}}
 Get user testerusers {tester=User{username='tester', email='tester@example.com'}}
 Add user: tester,tester@example.com
 Get user testerusers {tester=User{username='tester', email='tester@example.com'}}
 Get user testerusers {tester=User{username='tester', email='tester@example.com'}}
-Poll created: no.hvl.stud.springbootDemo.domains.PollApp$Poll@734f8317 by user: tester
+Poll created: no.hvl.stud.springbootDemo.domains.PollApp$Poll@38d42ab7 by user: tester
+Add user: tester,tester@example.com
+Get user testerusers {tester=User{username='tester', email='tester@example.com'}}
+Get user testerusers {tester=User{username='tester', email='tester@example.com'}}
+Poll created: no.hvl.stud.springbootDemo.domains.PollApp$Poll@6ace919c by user: tester
 Add user: tester,tester@example.com
 Get user testerusers {tester=User{username='tester', email='tester@example.com'}}
 </pre>
@@ -152,7 +160,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.8</a> at Sep 9, 2024, 8:19:39 AM</p>
+<a href="http://www.gradle.org">Gradle 8.8</a> at Sep 9, 2024, 9:18:43 AM</p>
 </div>
 </div>
 </body>
